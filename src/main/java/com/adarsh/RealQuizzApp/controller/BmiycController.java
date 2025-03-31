@@ -1,8 +1,7 @@
 package com.adarsh.RealQuizzApp.controller;
 
+import com.adarsh.RealQuizzApp.modal.BMIResponse;
 import com.adarsh.RealQuizzApp.modal.Beatmeifyoucan;
-import com.adarsh.RealQuizzApp.modal.QuestionWrapper;
-import com.adarsh.RealQuizzApp.modal.Response;
 import com.adarsh.RealQuizzApp.service.BmiycService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -25,8 +24,10 @@ public class BmiycController {
     }
 
     @PostMapping("updatecount")
-    public ResponseEntity<String> getEasyQues(@RequestBody List<Integer> usedIds){
-        return service.UpdateCount(usedIds);
+    public ResponseEntity<String> getEasyQues( @RequestBody List<BMIResponse> updateRes ){
+        System.out.println("updateRes:"+updateRes);
+        return service.UpdateCount(updateRes);
+
 
     }
 

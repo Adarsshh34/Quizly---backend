@@ -1,13 +1,11 @@
 package com.adarsh.RealQuizzApp.repo;
 
 import com.adarsh.RealQuizzApp.modal.Beatmeifyoucan;
-import com.adarsh.RealQuizzApp.modal.QuestionWrapper;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -33,6 +31,6 @@ public interface BmiycRepo extends JpaRepository<Beatmeifyoucan,Integer> {
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE beat_me_if_you_can  SET usage_count = usage_count + 1 WHERE id IN :ids",nativeQuery = true)
-    int updateUsageCount(@Param("ids") List<Integer> ids);
+    @Query(value = "UPDATE beat_me_if_you_can  SET usage_count = usage_count + :count WHERE id = :questionId",nativeQuery = true)
+    void updateUsageCount( Integer questionId,  Integer count);
 }

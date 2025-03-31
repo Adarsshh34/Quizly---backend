@@ -1,9 +1,7 @@
 package com.adarsh.RealQuizzApp.service;
 
-import com.adarsh.RealQuizzApp.modal.Question;
-import com.adarsh.RealQuizzApp.modal.QuestionWrapper;
-import com.adarsh.RealQuizzApp.modal.Quiz;
-import com.adarsh.RealQuizzApp.modal.Response;
+import com.adarsh.RealQuizzApp.modal.*;
+import com.adarsh.RealQuizzApp.repo.LeaderBoardDao;
 import com.adarsh.RealQuizzApp.repo.QuestionDao;
 import com.adarsh.RealQuizzApp.repo.QuizRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,16 +54,18 @@ public class QuizService {
     public ResponseEntity<Integer> calculateResult(Integer id, List<Response> responses) {
         Quiz quiz = quizrepo.findById(id).get();
         List<Question> questions  = quiz.getQuestions();
-        int right = 0;
+        int correctAns = 0;
         int i=0;
         for( Response response : responses){
             if(response.getResponse().equals(questions.get(i).getRightAnswer()))
-                right++;
+                correctAns++;
 
             i++;
         }
 
-        return new ResponseEntity<>(right,HttpStatus.OK);
+        return new ResponseEntity<>(correctAns,HttpStatus.OK);
 
     }
+
+
 }

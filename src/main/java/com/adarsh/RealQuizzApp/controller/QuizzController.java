@@ -1,6 +1,7 @@
 package com.adarsh.RealQuizzApp.controller;
 
 
+import com.adarsh.RealQuizzApp.modal.LeaderBoard;
 import com.adarsh.RealQuizzApp.modal.Question;
 import com.adarsh.RealQuizzApp.modal.QuestionWrapper;
 import com.adarsh.RealQuizzApp.modal.Response;
@@ -36,6 +37,8 @@ public class QuizzController {
     public ResponseEntity<Integer> submitQuiz(@PathVariable Integer id, @RequestBody List<Response> response ){
         return service.calculateResult(id,response);
     }
+
+
 
 
 

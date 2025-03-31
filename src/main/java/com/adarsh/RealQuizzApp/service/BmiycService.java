@@ -1,8 +1,9 @@
 package com.adarsh.RealQuizzApp.service;
 
+import com.adarsh.RealQuizzApp.modal.BMIResponse;
 import com.adarsh.RealQuizzApp.modal.Beatmeifyoucan;
-import com.adarsh.RealQuizzApp.modal.QuestionWrapper;
 import com.adarsh.RealQuizzApp.repo.BmiycRepo;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,19 +29,16 @@ public class BmiycService {
 
     }
 
-    public ResponseEntity<String> UpdateCount(List<Integer> usedIds) {
+    @Transactional
+    public ResponseEntity<String> UpdateCount(List<BMIResponse> usedIds) {
 
-        int updatedRows = repo.updateUsageCount(usedIds);
-
-        if (updatedRows > 0) {
-            return new ResponseEntity<>("Successfully updated " + updatedRows + " records", HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>("No records updated. IDs might be invalid.", HttpStatus.NOT_FOUND);
+        for (BMIResponse usage : usedIds) {
+            repo.updateUsageCount(usage.getId(), usage.getUsageCount());
         }
+        return new ResponseEntity<>("Usage Count Updated!",HttpStatus.OK);
 
-//        repo.updateUsageCount(usedIds);
-//
-////        update this
-//        return new ResponseEntity<>("Success",HttpStatus.OK);
+
+
+
     }
 }
