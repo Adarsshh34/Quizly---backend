@@ -1,0 +1,13 @@
+2025-04-03 02:26:44 [http-nio-8080-exec-2] INFO  performance - String com.adarsh.RealQuizzApp.service.UserService.verify(Users) executed in 778ms
+2025-04-03 02:26:51 [http-nio-8080-exec-7] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.QuizService.createQuiz(String,int,String) executed in 66ms
+2025-04-03 02:26:51 [http-nio-8080-exec-9] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.QuizService.getQuizQuestion(int) executed in 39ms
+2025-04-03 02:40:34 [http-nio-8080-exec-2] INFO  performance - String com.adarsh.RealQuizzApp.service.UserService.verify(Users) executed in 777ms
+2025-04-03 02:44:18 [http-nio-8080-exec-2] INFO  performance - String com.adarsh.RealQuizzApp.service.UserService.verify(Users) executed in 849ms
+2025-04-03 02:44:19 [http-nio-8080-exec-5] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.LeaderBoardService.getData() executed in 49ms
+2025-04-03 02:44:19 [http-nio-8080-exec-6] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.LeaderBoardService.getData() executed in 6ms
+2025-04-03 02:44:59 [http-nio-8080-exec-10] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.QuizService.createQuiz(String,int,String) executed in 81ms
+2025-04-03 02:44:59 [http-nio-8080-exec-2] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.QuizService.getQuizQuestion(int) executed in 25ms
+2025-04-03 02:52:04 [http-nio-8080-exec-2] INFO  performance - String com.adarsh.RealQuizzApp.service.UserService.verify(Users) executed in 716ms
+2025-04-03 02:52:07 [http-nio-8080-exec-5] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.LeaderBoardService.getData() executed in 39ms
+2025-04-03 02:52:07 [http-nio-8080-exec-6] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.LeaderBoardService.getData() executed in 0ms
+2025-04-03 02:53:32 [http-nio-8080-exec-2] INFO  performance - String com.adarsh.RealQuizzApp.service.UserService.verify(Users) executed in 769ms
