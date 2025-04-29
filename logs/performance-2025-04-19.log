@@ -1,0 +1,14 @@
+2025-04-19 01:09:50 [http-nio-8080-exec-1] INFO  performance - String com.adarsh.RealQuizzApp.service.UserService.verify(Users) executed in 887ms
+2025-04-19 01:09:58 [http-nio-8080-exec-5] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.LeaderBoardService.getData() executed in 46ms
+2025-04-19 01:09:58 [http-nio-8080-exec-6] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.LeaderBoardService.getData() executed in 7ms
+2025-04-19 01:45:18 [http-nio-8080-exec-10] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.QuizService.createQuiz(String,int,String) executed in 238ms
+2025-04-19 01:45:18 [http-nio-8080-exec-1] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.QuizService.getQuizQuestion(int) executed in 49ms
+2025-04-19 01:56:13 [http-nio-8080-exec-5] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.QuizService.createQuiz(String,int,String) executed in 24ms
+2025-04-19 01:56:13 [http-nio-8080-exec-8] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.QuizService.getQuizQuestion(int) executed in 4ms
+2025-04-19 02:02:58 [http-nio-8080-exec-10] INFO  performance - String com.adarsh.RealQuizzApp.service.UserService.verify(Users) executed in 249ms
+2025-04-19 02:03:08 [http-nio-8080-exec-1] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.QuizService.createQuiz(String,int,String) executed in 15ms
+2025-04-19 02:03:08 [http-nio-8080-exec-3] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.QuizService.getQuizQuestion(int) executed in 6ms
+2025-04-19 02:10:47 [http-nio-8080-exec-7] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.LeaderBoardService.getData() executed in 29ms
+2025-04-19 02:10:47 [http-nio-8080-exec-9] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.LeaderBoardService.getData() executed in 10ms
+2025-04-19 02:10:52 [http-nio-8080-exec-3] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.LeaderBoardService.getData() executed in 6ms
+2025-04-19 02:10:52 [http-nio-8080-exec-5] INFO  performance - ResponseEntity com.adarsh.RealQuizzApp.service.LeaderBoardService.getData() executed in 7ms
