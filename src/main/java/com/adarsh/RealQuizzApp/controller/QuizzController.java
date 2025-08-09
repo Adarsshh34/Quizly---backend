@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("quiz")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "quizly-by-adarsh.netlify.app")
 public class QuizzController {
 
     @Autowired

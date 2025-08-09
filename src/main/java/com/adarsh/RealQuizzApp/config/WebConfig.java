@@ -1,4 +1,5 @@
 package com.adarsh.RealQuizzApp.config;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
@@ -9,12 +10,22 @@ import java.util.List;
 
 @Configuration
 public class WebConfig {
+
+    @Value("${frontend.url}")
+    private String Frontend_url;
+
+    @Value("${frontendtest.url}")
+    private String Frontendtest;
+
     @Bean
     public CorsFilter corsFilter() {
+
+
+
         CorsConfiguration config = new CorsConfiguration();
 //        config.addAllowedOrigin("http://localhost:5173"); // Allow your frontend origin
 //        config.addAllowedOrigin("http://localhost:5173/test"); // Allow your frontend origin
-        config.setAllowedOrigins(List.of("http://localhost:5173" , "http://localhost:5173/test"));
+        config.setAllowedOrigins(List.of(Frontend_url , Frontendtest));
 //        config.setAllowedHeaders(List.of("Authorization", "Content-Type"));
         config.setAllowedHeaders(List.of("*")); // Allow all headers
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));

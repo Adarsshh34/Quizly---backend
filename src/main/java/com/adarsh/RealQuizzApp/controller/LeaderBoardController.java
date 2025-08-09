@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("leaderboard")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://quizly-by-adarsh.netlify.app")
 public class LeaderBoardController {
 
     @Autowired
